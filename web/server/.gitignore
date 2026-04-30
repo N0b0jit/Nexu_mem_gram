@@ -1,0 +1,22 @@
+/node_modules
+/uploads
+.env
+.env.local
+*.log
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Environment
+dotenvx
+.env*

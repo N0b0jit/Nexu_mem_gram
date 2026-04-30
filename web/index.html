@@ -1,0 +1,66 @@
+/* 
+ * Nexomemgram - Telegram Media Gallery
+ * Frontend: HTML Structure
+ */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexomemgram</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Config Panel -->
+  <div class="config-panel" id="configPanel">
+    <button class="config-toggle" id="configToggle">⚙️</button>
+    <div class="config-content">
+      <h3>Telegram Settings</h3>
+      <form id="configForm">
+        <div class="form-group"><label>API ID</label><input type="text" name="apiId" placeholder="API ID"></div>
+        <div class="form-group"><label>API Hash</label><input type="text" name="apiHash" placeholder="API Hash"></div>
+        <div class="form-group"><label>Bot Token</label><input type="text" name="botToken" placeholder="Bot Token"></div>
+        <div class="form-group"><label>Channel ID</label><input type="text" name="channelId" placeholder="Channel ID"></div>
+        <button type="submit" class="save-btn">Save</button>
+        <button type="button" id="deepScanBtn" class="scan-btn">Deep Scan</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Nexomemgram</h1>
+    <p class="subtitle">Cloud-Synced Media Gallery</p>
+  </header>
+
+  <!-- Drop Zone -->
+  <div class="drop-zone" id="dropZone">
+    <div class="drop-zone-content">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+        <polyline points="17 8 12 3 7 8"></polyline>
+        <line x1="12" y1="3" x2="12" y2="15"></line>
+      </svg>
+      <p>Drop images here to upload</p>
+      <span class="drop-zone-hint">or click to browse</span>
+    </div>
+    <input type="file" id="fileInput" multiple accept="image/*" style="display:none">
+  </div>
+
+  <!-- Gallery -->
+  <main class="gallery-container">
+    <div class="masonry-grid" id="masonryGrid"></div>
+    <div class="loading-indicator" id="loadingIndicator" style="display:none">
+      <div class="spinner"></div><p>Loading...</p>
+    </div>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
