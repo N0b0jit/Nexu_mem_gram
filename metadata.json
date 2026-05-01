@@ -1,0 +1,6 @@
+{
+  "name": "Nexomemgram",
+  "description": "A minimalist personal photo cloud powered by Telegram as a backend. Store and browse your media seamlessly.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["Media storage", "Cloud sync"]
+}
